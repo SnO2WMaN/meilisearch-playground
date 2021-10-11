@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v0.22.0
+    volumes:
+      - meili-data:/data.ms
+    ports:
+      - published: 7700
+        target: 7700
+
+volumes:
+  meili-data:
+    driver: local
